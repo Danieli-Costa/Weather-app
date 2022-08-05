@@ -1,0 +1,21 @@
+.container {
+  max-width: 960px;
+  box-sizing: border-box;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.weather-app {
+  border: 1px solid #dadde1;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+
+li {
+  list-style: none;
+}
