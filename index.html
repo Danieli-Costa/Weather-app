@@ -16,54 +16,56 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form class="search-form" class="mb-3">
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form class="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Enter a city"
+                  autocomplete="on"
+                  autofocus="on"
+                  class="form-control"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search 🔍"
+                  class="btn btn-primary w-100"
+                />
+              </div>
+            </div>
+          </form>
+          <br />
+          <h1 id="city"></h1>
+          <h5 id="date"></h5>
+          <h6 id="description"></h6>
           <div class="row">
             <div class="col-6">
-              <input
-                type="text"
-                placeholder="Enter a city"
-                autocomplete="on"
-                autofocus="on"
-                id="location"
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt="weather"
               />
+              <span class="temperature"></span>
+              <span class="celcius">°C</span> |
+              <span class="fahrenheit">°F</span>
             </div>
-            <div class="col-3">
-              <input type="submit" value="Search 🔍" id="search" />
+            <div class="col-6">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind-speed"></span>km/h</li>
+              </ul>
             </div>
-            <div class="col-3">
-              <button id="current-location-button">Current</button>
-            </div>
-          </div>
-        </form>
-        <br />
-        <h1 id="city"></h1>
-        <h5 id="date"></h5>
-        <h6 id="description"></h6>
-        <div class="row">
-          <div class="col-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-              alt="weather"
-            />
-            <span class="temperature"></span>
-            <span class="celcius">°C</span> |
-            <span class="fahrenheit">°F</span>
-          </div>
-          <div class="col-6">
-            <ul>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind-speed"></span>km/h</li>
-              <li>Precipitation: <span id="precipitation"></span>%</li>
-            </ul>
           </div>
         </div>
+        <footer>
+          <a href="https://github.com/Danieli-Costa" target="_blank"
+            >Open-source code</a
+          >, by Danieli Costa
+        </footer>
       </div>
-      <footer>
-        <a href="https://github.com/Danieli-Costa" target="_blank"
-          >Open-source code</a
-        >, by Danieli Costa
-      </footer>
     </div>
     <script src="src/javascript.js"></script>
   </body>
