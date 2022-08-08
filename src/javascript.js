@@ -71,5 +71,3 @@ let formSearch = document.querySelector(".search-form");
 formSearch.addEventListener("submit", searchCity);
 
 search("New York");
-
-//bonus point current location
