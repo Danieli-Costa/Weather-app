@@ -24,6 +24,33 @@ if (nowMinute < 10) {
 let date = document.querySelector("#date");
 date.innerHTML = `${day}, ${nowHour}:${nowMinute}`;
 
+//forecast for the week
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Wed", "Thu", "Fri", "Sat", "Sun", "Mon"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+                <div class="weather-forecast-date">${day}</div>
+                <img
+                  src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                  alt=""
+                  width="36"
+                />
+                <div class="weather-forecast-temperatures">
+                  <span class="weather-forecast-max">18°</span>
+                  <span class="weather-forecast-min">12°</span>
+                </div>
+              </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+displayForecast();
+
 //search engine
 function showTemperature(response) {
   document.querySelector("#city").innerHTML = response.data.name;
@@ -63,6 +90,8 @@ function searchCity(event) {
   let city = document.querySelector(".form-control").value;
   search(city);
 }
+
+//conversion of temperature
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
