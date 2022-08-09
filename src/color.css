@@ -6,8 +6,14 @@ h1 {
   margin-bottom: 0;
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+}
 li {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 li:first-letter {
@@ -21,6 +27,7 @@ footer {
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
+  font-family: "Quicksand", sans-serif;
 }
 
 .weather-app {
@@ -32,4 +39,8 @@ footer {
     rgb(185, 212, 242) 11.2%,
     rgb(244, 210, 226) 100.3%
   );
+}
+
+.fahrenheit {
+  text-decoration: none;
 }

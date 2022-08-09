@@ -21,8 +21,8 @@ if (nowMinute < 10) {
   nowMinute = `0${nowMinute}`;
 }
 
-let h5 = document.querySelector("h5");
-h5.innerHTML = `${day}, ${nowHour}:${nowMinute}`;
+let date = document.querySelector("#date");
+date.innerHTML = `${day}, ${nowHour}:${nowMinute}`;
 
 //search engine
 function showTemperature(response) {
