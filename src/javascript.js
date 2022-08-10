@@ -25,7 +25,7 @@ let date = document.querySelector("#date");
 date.innerHTML = `${day}, ${nowHour}:${nowMinute}`;
 
 //forecast for the week
-function displayForecast() {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -52,8 +52,8 @@ function displayForecast() {
 
 function getForecast(coordinates) {
   let apiKey = "b0fe589cc24a909e1d262c962ba031e6";
-  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
-  console.log(apiUrl);
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 function showTemperature(response) {
