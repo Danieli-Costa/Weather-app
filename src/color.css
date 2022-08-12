@@ -4,6 +4,7 @@ h1 {
   font-weight: 100;
   line-height: 28px;
   margin-bottom: 0;
+  padding: 3px 0px;
 }
 
 ul {
@@ -24,17 +25,18 @@ li:first-letter {
 footer {
   text-align: center;
 }
+
 .units {
   font-size: 20px;
 }
 
 .temperature {
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .weather-app-wrapper {
   max-width: 600px;
-  margin: 30px auto;
+  margin: 80px auto;
   font-family: "Quicksand", sans-serif;
 }
 
@@ -42,6 +44,12 @@ footer {
   padding: 20px;
   border: 1px solid #dadde1;
   border-radius: 5px;
+  background: linear-gradient(
+    359deg,
+    rgb(150, 192, 255) -17.7%,
+    rgb(255, 180, 161) 101.5%
+  );
+  box-shadow: 10px 10px 24px rgba(0, 0, 0, 0.1);
 }
 
 .weather-forecast {
@@ -51,16 +59,16 @@ footer {
 }
 
 .weather-forecast-date {
-  font-size: 16px;
+  font-size: 19px;
   opacity: 0.5;
 }
 
 .weather-forecast-temperatures {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 .weather-forecast-min {
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 #humidity {
